@@ -8,7 +8,7 @@ def validate_input(choice):
             raise ValueError
         return choice
     except ValueError:
-        print("Введено не число или неправильное количество камней")
+        print("Введено не число или неправильное колличество камней")
 
 
 def computer_turn(stones):
