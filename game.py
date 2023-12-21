@@ -8,7 +8,7 @@ def validate_input(choice):
             raise ValueError
         return choice
     except ValueError:
-        print("Введено не число или неправильное колличество камней")
+        print("Введено не число или неправильное количество камней")
 
 
 def computer_turn(stones):
@@ -31,20 +31,20 @@ def user_turn(stones):
 
 def play_game():
     stones = random.randint(4, 30)
-    print("Колличество камней в куче:", stones)
+    print("Количество камней в куче:", stones)
     while stones > 1:
         stones = user_turn(stones)
-        print("Колличество оставшихся камней:", stones)
+        print("Количество оставшихся камней:", stones)
         if stones == 1:
             print("Ты победил!")
             return 0
         if stones == 0:
-            print("Компьютер выйграл")
+            print("Компьютер выиграл")
             return 0
         stones = computer_turn(stones)
-        print("Колличество оставшихся камней:", stones)
+        print("Количество оставшихся камней:", stones)
         if stones == 1:
-            print("Компьютер выйграл!")
+            print("Компьютер выиграл!")
             return 0
 
 
